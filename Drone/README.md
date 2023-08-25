@@ -1,2 +1,0 @@
-# Robotics
-Hardware Projects
