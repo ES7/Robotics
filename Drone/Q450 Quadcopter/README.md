@@ -1,2 +1,1 @@
-# Robotics
-Hardware Projects
+# Q450 Quadcopter
