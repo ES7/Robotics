@@ -1,16 +1,29 @@
-# Luminosity Drone
-As Luminosity Drone explored the alien landscape, it spotted a peculiar reading. The thermal camera detected a faint, fluctuating heat signature emanating from a nearby cave. Luminosity Drone, driven by its programming and an inherent curiosity, glided following the source of these signals. To its astonishment, Luminosity Drone realised that the heat signatures represented a diverse array of lifeforms. Each signature corresponded to a different organism, some larger and more complex, while others were smaller and simpler. Luminosity Drone had stumbled upon a hidden ecosystem, thriving in the depths of the planet. Luminosity Drone continued its mission, exploring other planets and documenting the diverse thermal landscapes they possessed. With each new discovery, Luminosity Drone expanded humanity's understanding of the universe and deepened the collective curiosity about the mysteries that lay beyond Earth. And so, Luminosity Drone the extraordinary drone, armed with its thermal camera and relentless in its pursuit of knowledge, has forever changed the course of humanity's understanding of life in the universe. <br>
+# Software Installations
 
-**Learnings**<br>
-**Technology Stacks :** Drone Building, Control Systems, Position control & Waypoint navigation, Image processing.<br>
-**Tools and Technologies :** Robot Operating System (ROS), Gazebo simulation, Python programming, OpenCV <br>
+**1. Ubuntu 20.04 Installation** <br>
+installation Link :- https://releases.ubuntu.com/focal/ <br>
+We will use Ubuntu 20.04 operating system (do not use any kind of virtual machines or Windows Subsystem for Linux (WSL) as we do not recommend and we wont be providing support). You can follow any tutorial on internet or YouTube to dual boot your system and install Ubuntu 20.04 alongside your existing operating system.
 
-**System Requirements**<br>
-**Operating System :** Ubuntu 22.04 LTS<br>
-**Processor :** i5 8th gen or above / equivalent<br>
-**HDD or SSD Storage space :** 50GB or more<br>
-**RAM :** 8GB or more<br>
+**2. ROS Installation**<br>
+First thing after installing a fresh Ubuntu os is upgrading your system to the latest one, to do that, open a terminal, to open one, press Ctrl+Alt+t on your keyboard and type these commands carefully and press enter to execute a command. <br>
+_sudo apt upgrade_ <br>
 
-**ROS Tutorials :-** http://wiki.ros.org/ROS/Tutorials <br>
-**ROS Installation :-** http://wiki.ros.org/ROS/Installation <br>
-**Drone PID :-** https://youtu.be/wkfEZmsQqiA?si=ItBP3VINRB9G_tdu <br>
+Setup your computer to accept software from packages.ros.org. <br>
+_sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'_ <br>
+
+**Set up your keys**<br>
+_sudo apt install curl # if you haven't already installed curl <br>
+curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -_ <br>
+
+**Installation** <br>
+_sudo apt update_ <br>
+_sudo apt install ros-noetic-desktop-full_ <br>
+
+**Environment setup** <br>
+You must source this script in every bash terminal you use ROS in<br>
+_source /opt/ros/noetic/setup.bash_<br>
+
+It can be convenient to automatically source this script every time a new shell is launched. These commands will do that for you <br>
+_echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc <br>
+echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc_ <br>
+_source ~/.bashrc_ <br>
