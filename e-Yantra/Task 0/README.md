@@ -39,12 +39,12 @@ _`sudo roesdep init <br>
 rosdep update`_ <br>
 
 During rosdep initialization if you get error like "website may be down", then follow the below code : <br>
-_`#open hosts file:
-sudo gedit /etc/hosts
-#add this line:
-151.101.84.133 raw.githubusercontent.com
-#save and close,then run:
-sudo rosdep init
-rosdep update`_
+_`#open hosts file: <br>
+sudo gedit /etc/hosts <br>
+#add this line: <br>
+151.101.84.133 raw.githubusercontent.com <br>
+#save and close,then run:<br>
+sudo rosdep init<br>
+rosdep update`_ <br>
 
 After this you have successfully installed **Ubuntu 20.04 LTS** and **ROS1 Noetic**.<br>
