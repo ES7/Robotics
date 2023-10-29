@@ -6,7 +6,7 @@ We will use Ubuntu 20.04 operating system (do not use any kind of virtual machin
 
 **2. ROS Installation**<br>
 First thing after installing a fresh Ubuntu os is upgrading your system to the latest one, to do that, open a terminal, to open one, press Ctrl+Alt+t on your keyboard and type these commands carefully and press enter to execute a command. <br>
-_sudo apt upgrade_ <br>
+`_sudo apt upgrade_` <br>
 
 Setup your computer to accept software from packages.ros.org. <br>
 _sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'_ <br>
