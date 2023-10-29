@@ -34,7 +34,7 @@ _`sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generato
 **Initialize rosdep** <br>
 _`sudo apt install python3-rosdep`_ <br>
 
-With the following, you can initalize rosdep
+With the following, you can initalize rosdep <br>
 _`sudo roesdep init <br>
 rosdep update`_ <br>
 
