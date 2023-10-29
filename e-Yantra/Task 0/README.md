@@ -12,8 +12,8 @@ Setup your computer to accept software from packages.ros.org. <br>
 _`sudo sh -c 'echo "deb http://packages.ros.org/ros/ubuntu $(lsb_release -sc) main" > /etc/apt/sources.list.d/ros-latest.list'`_ <br>
 
 **Set up your keys**<br>
-_`sudo apt install curl # if you haven't already installed curl <br>
-curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -`_ <br>
+_`sudo apt install curl # if you haven't already installed curl` <br>
+`curl -s https://raw.githubusercontent.com/ros/rosdistro/master/ros.asc | sudo apt-key add -`_ <br>
 
 **Installation** <br>
 _`sudo apt update`_ <br>
@@ -24,8 +24,8 @@ You must source this script in every bash terminal you use ROS in<br>
 _`source /opt/ros/noetic/setup.bash`_<br>
 
 It can be convenient to automatically source this script every time a new shell is launched. These commands will do that for you <br>
-_`echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc <br>
-echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc`_ <br>
+_`echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc` <br>
+`echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc`_ <br>
 _`source ~/.bashrc`_ <br>
 
 **Dependencies for building packages**<br>
@@ -35,8 +35,8 @@ _`sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generato
 _`sudo apt install python3-rosdep`_ <br>
 
 With the following, you can initalize rosdep <br>
-_`sudo roesdep init <br>
-rosdep update`_ <br>
+_`sudo roesdep init` <br>
+`rosdep update`_ <br>
 
 During rosdep initialization if you get error like "website may be down", then follow the below code : <br>
 _`#open hosts file:` <br>
