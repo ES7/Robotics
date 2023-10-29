@@ -4,8 +4,13 @@ As Luminosity Drone explored the alien landscape, it spotted a peculiar reading.
 **Learnings**<br>
 **Technology Stacks :** Drone Building, Control Systems, Position control & Waypoint navigation, Image processing.<br>
 **Tools and Technologies :** Robot Operating System (ROS), Gazebo simulation, Python programming, OpenCV <br>
+
 **System Requirements**<br>
 **Operating System :** Ubuntu 22.04 LTS<br>
 **Processor :** i5 8th gen or above / equivalent<br>
 **HDD or SSD Storage space :** 50GB or more<br>
 **RAM :** 8GB or more<br>
+
+**ROS Tutorials :-** http://wiki.ros.org/ROS/Tutorials
+**ROS Installation :-** http://wiki.ros.org/ROS/Installation
+**Drone PID :-** https://youtu.be/wkfEZmsQqiA?si=ItBP3VINRB9G_tdu
