@@ -27,3 +27,15 @@ It can be convenient to automatically source this script every time a new shell 
 _echo "source /opt/ros/noetic/setup.bash" >> ~/.bashrc <br>
 echo 'export PATH="$PATH:$HOME/.local/bin"' >> ~/.bashrc_ <br>
 _source ~/.bashrc_ <br>
+
+**Dependencies for building packages**<br>
+_sudo apt install python3-rosdep python3-rosinstall python3-rosinstall-generator python3-wstool build-essential python3-catkin-tools_ <br>
+
+**Initialize rosdep** <br>
+_sudo apt install python3-rosdep_ <br>
+
+With the following, you can initalize rosdep
+_sudo roesdep init <br>
+rosdep update_ <br>
+
+After this you have successfully installed **Ubuntu 20.04 LTS** and **ROS1 Noetic**.<br>
