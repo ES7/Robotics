@@ -1,4 +1,4 @@
-# Stablising the Swift Drone
+# Stablizing the Swift Drone
 **Aim :-** The aim of this task is to build a PID control system to stabilise the Swift Drone at any given position in a simulation environment in Gazebo.  <br>
 
 **Prerequisites :-** It is presumed that you have successfully completed Task 0 and completed the codechef challenge. Also this task involves writing programs in Python programming language, so get acquainted with the basics of Python and ROS libraries for Pyhton. Follow the given resources to get started with the topics and do not limit yourself with the resources listed, internet is a vast ocean of knowledge, make use of it ! <br>
