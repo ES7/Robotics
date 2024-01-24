@@ -68,7 +68,7 @@ Once connected, the code sets up a **client connection** to a server located at 
 * After the follower drone holds its position for some time, the first drone will change its setpoint to the upper left corner of the rectangle and move there.
 * This alternate cycle will keep on going until the first drone reach its final setpoint(as provided list, in our case we set the last setpoint (0,0) of rectangle) and the follower drone move to the previous setpoint of the first drone(i.e. previous point of (0,0) of rectangle i.e. lower right corner of rectangle).
 * After that both drones will finally land.
-* 
+
 The main theme of this task is that, a set of points will be provided only to the first drone, and the follower drone will chase the previous setpoint of the current setpoint of the first drone. this movement will take alternatively.
 <br><br>
 
