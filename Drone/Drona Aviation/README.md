@@ -71,6 +71,7 @@ Once connected, the code sets up a **client connection** to a server located at 
 <br>
 The main theme of this task is that, a set of points will be provided only to the first drone, and the follower drone will chase the previous setpoint of the current setpoint of the first drone. this movement will take alternatively.
 <br><br>
+
 ## Final Result and Conclusion
 **Task 1 :-** Our idea and application achieved drone take-off easily with the Python wrapper we created. Only common problems with implementation were faced which were cleared through some trial and error. By then, we successfully connected the drone with our wrapper and sent MSP packets. <br>
 **Task 2 :-** With a lot of failed attempts we finally got the drone doing what it was meant to. Drone followed the coordinates which were feeded, smoothly while maintaining a fixed altitude. This was achieved by using a single camera. Position control was fine tuned with different PID gau  Now we could control Pluto’s height and position. <br>
