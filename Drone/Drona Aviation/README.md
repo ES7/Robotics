@@ -76,3 +76,14 @@ The main theme of this task is that, a set of points will be provided only to th
 **Task 1 :-** Our idea and application achieved drone take-off easily with the Python wrapper we created. Only common problems with implementation were faced which were cleared through some trial and error. By then, we successfully connected the drone with our wrapper and sent MSP packets. <br>
 **Task 2 :-** With a lot of failed attempts we finally got the drone doing what it was meant to. Drone followed the coordinates which were feeded, smoothly while maintaining a fixed altitude. This was achieved by using a single camera. Position control was fine tuned with different PID gau  Now we could control Pluto’s height and position. <br>
 **Task 3 :-** Second drone successfully communicated with the wrapper through an external WiFi device(ESP32 board with a ping of approx. 100ms) and was made to follow the first drone. But the drone provided to us was defective and was unable to properly takeoff above some altitude. This restricted us to proceed further and test our code. The hardware issue couldn’t be fixed in the limited time. Hence the script was tested even with the faulty drone provided by the company. The script was working nicely and should work with a functional drone. <br>
+
+## Literature Review
+We went to look for a lot of literature from the start and came across a lot of sources even while initial tasks were going on. These were the most useful texts we came across :
+https://github.com/ke4ukz/PyMSP
+https://www.researchgate.net/publication/360493556_Design_and_Test_of_a_Controller_for_the_Pluto_12_Quadcopter
+https://github.com/Asadullah-Dal17/Basic-Augmented-reality-course-opencv
+https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_calib3d/py_depthmap/py_depthmap.html
+https://www.mdpi.com/1424-8220/20/17/4825
+https://www.kalmanfilter.net/default.aspx
+
+## Final Pipeline
