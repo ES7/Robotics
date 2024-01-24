@@ -4,3 +4,21 @@ all the 3 tasks of the problem statement. The first task was to make the pytohn 
 ROS or Pluto Drone App. Second task was to allow for setpoint navigation which can be hardcoded in the program initially, the drone is viewed by a camera on the s the Aruco Marker on top of the drone. Third task was to simultaneously control two drones which would make a rectangle in sync.
 <br><br>
 For more details go through the problem statement `DronaAviationPS.pdf`
+<br><br>
+## Task 1
+This wrapper implements a communication pipeline between a laptop and Pluto drone using the **Telnet protocol**. The pipeline starts with a connection to the Pluto drone with a specified **host** and **port** through the **connect function**, which opens a Telnet connection and starts a new thread **monitorThread** to listen to incoming data from the drone. The data is received by the **monitorSerialPort** function and parsed into individual messages consisting of a header, message size, command, data payload, and checksum. The parsed messages are stored in the responses dictionary. The pipeline can be terminated by calling the **disconnect function**, which stops the monitorThread and closes the Telnet connection.
+<br>
+* sendData : sends a packet of data over Telnet
+* waitForResponse : waits until the requested data is received and then returns the data
+* encodePacket : creates an MSP packet and sends it over the Telnet connection
+* getData : encapsulates the process of sending a command to get data and returning the data when it is received
+* setRC : sends RC values to the drone to control its flight
+* setCommand : sends different commands to the drone to perform specific actions such as takeoff, landing, or flipping
+* setThrottle(value) : Sets the throttle value of the quadcopter in PWM units with a range of 900 to 2100.
+* setPitch(value) : Sets the pitch value of the quadcopter in PWM units with a range of 900 to 2100.
+* setRoll(value) : Sets the roll value of the quadcopter in PWM units with a range of 900 to 2100.
+* setYaw(value) : Sets the yaw value of the quadcopter in PWM units with a range of 900 to 2100.
+* ARM() : Arms the quadcopter by setting a value of 1500 to the "aux4" channel.
+* DISARM() : Disarms the quadcopter by setting a value of 1000 to the "aux4" channel.
+* AltitudeHold_ON() : Turns on the altitude hold mode by setting a value of 1500 to the "aux3" channel.
+* AltitudeHold_OFF() : Turns off the altitude hold mode by setting a value of 1000 to the "aux3" channel.
