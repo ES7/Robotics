@@ -80,11 +80,11 @@ The main theme of this task is that, a set of points will be provided only to th
 ## Literature Review
 We went to look for a lot of literature from the start and came across a lot of sources even while initial tasks were going on. These were the most useful texts we came across : <br>
 [MSP Reference](https://github.com/ke4ukz/PyMSP)
-https://www.researchgate.net/publication/360493556_Design_and_Test_of_a_Controller_for_the_Pluto_12_Quadcopter
-https://github.com/Asadullah-Dal17/Basic-Augmented-reality-course-opencv
-https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_calib3d/py_depthmap/py_depthmap.html
-https://www.mdpi.com/1424-8220/20/17/4825
-https://www.kalmanfilter.net/default.aspx
+[Pluto Controlling](https://www.researchgate.net/publication/360493556_Design_and_Test_of_a_Controller_for_the_Pluto_12_Quadcopter)
+[Depth estimation, camera calibration, aruco detection](https://github.com/Asadullah-Dal17/Basic-Augmented-reality-course-opencv)
+[Depth estimation by stereo camera(for future improvements)](https://docs.opencv.org/3.0-beta/doc/py_tutorials/py_calib3d/py_depthmap/py_depthmap.html)
+[Aruco detection improvements](https://www.mdpi.com/1424-8220/20/17/4825)
+[Filter for reducing error in depth](https://www.kalmanfilter.net/default.aspx)
 
 ## Final Pipeline
 ![Screenshot 2024-01-24 120057](https://github.com/ES7/Robotics/assets/95970293/e01973b6-10c9-462e-bc01-3ae70c8fb125)
