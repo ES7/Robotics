@@ -129,7 +129,8 @@ If they are not then we might need to **'source'** some **`setup.*sh`** files.
 Environment setup files are generated for us, but can come from different places :<br>
 - ROS packages installed with package managers provide setup.*sh files.
 - rosbuild workspaces provide setup.*sh files using tools like rosws.
-- Setup.*sh files are created as a by-product of building or installing catkin packages.<br>
+- Setup.*sh files are created as a by-product of building or installing catkin packages.
+
 If we just installed ROS from apt on Ubuntu then we will have setup.*sh files in **'`/opt/ros/<distro>/`'**, and we could source them like so : **`$ source /opt/ros/<distro>/setup.bash`**<br>
 Using the short name of our ROS distribution instead of <distro>. If we have installed ROS Kinetic, that would be : **`$ source /opt/ros/kinetic/setup.bash`**<br>
 We will need to run this command on every new shell we open to have access to the ROS commands, unless we add this line to our **.bashrc**. This process allows us to install serval ROS distributions (eg. indigo and kinetic) on the same computer and switch between them. On other platforms we will find these setup.*sh files wherever we have installed ROS.
