@@ -25,11 +25,16 @@
 - **`/bin/`** is the folder where most common Linux commands reside. Commands like ls, chmodetc.
 
 ### Linux File System Types :- ext, ext2, ext3, JFS, XFSbtrfs, swap.
-- **Ext :-** “extended file system” was the very 1st file system designed for Linux. To overcome the limitations of the MINIX file system.
-- **Ext2 :-** “2d extended system” innovated in areas such as storage capacity, general performance. Allows upto 2 TB of data.
-- **Ext3 :-** “3rd extended system” is a journaling file system, which records in a separate log changes and updates to files and data before such actions have been completed. Means if the computer crashes then this separate log containing the changes made before crash can be used to access the stored data, thus repairing and restoring the files upon reboot.
-- **Ext4 :-** “4th extended system” this system overcomes numerous limitations.
-- **JFS :-** “Journaling File System” easy to recover data after crash. Uses less CPU power than the other file systems.
+- **Ext :-** "extended file system" was the very 1st file system designed for Linux. To overcome the limitations of the MINIX file system.
+- **Ext2 :-** "2d extended system" innovated in areas such as storage capacity, general performance. Allows upto 2 TB of data.
+- **Ext3 :-** "3rd extended system" is a journaling file system, which records in a separate log changes and updates to files and data before such actions have been completed. Means if the computer crashes then this separate log containing the changes made before crash can be used to access the stored data, thus repairing and restoring the files upon reboot.
+- **Ext4 :-** "4th extended system" this system overcomes numerous limitations.
+- **JFS :-** "Journaling File System" easy to recover data after crash. Uses less CPU power than the other file systems.
 - **XFS :-** 64-bit high performance journaling file system. It’s particularly noteworthy for how incredibly well it works with very large files. Though contrarily, not especially the best with smaller files.
-- **Btrfs :-** “B Tree File System” it is a rival file system to ext4, transfers data faster and offers more stability. 
-- To check the file type go to the terminal and type :- **`$ df -T`**.
+- **Btrfs :-** "B Tree File System" it is a rival file system to ext4, transfers data faster and offers more stability. 
+To check the file type go to the terminal and type :- **`$ df -T`**.
+
+**`/`** is the top level directory of a Linux system. The name "top level" means the **"root"**, thus it is the root directory of the system. Though it is separate from **"/root directory"**, so we shouldn't confuse the two.
+All other directories stem from this top level directory like a pyramid. This concept is not unique to Linux, as the same thing can be observed in other Operating Systems. Windows has partitions such as C: and D:.
+In Linux, these directories in the so-called "pyramid" exist in a hierarchy with a specific structure. This can be observed in your terminal by using the command : $ cd /.
+This command displays the directories and files while in the top level directory.
