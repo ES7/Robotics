@@ -114,3 +114,22 @@ Eg : **`sudo chmod +x hello.sh`**.
 - **`pwd` :-** this will print the path of the current directory we are in.
 - **`cat -n file.txt` :-** this will print the content of file.txt with line numbers, in the terminal.
 - **`man` :-** use full command in UNIX, if we are not sure how to use any command then just call this like :  man which.
+
+### ROS (Robot Operating System)
+ROS is an open-source framework and middleware specifically designed to develop and control robots. Despite its name, ROS is not a traditional operating system like Windows or Linux. Instead, it provides a set of tools, libraries, and conventions for building and managing complex robot applications.<br> 
+ROS offers a modular and distributed architecture that facilitates communication between different components of a robot system. This includes sensors, actuators, control algorithms, planning algorithms, visualization tools, and more.
+
+**ROS Tutorials :-** http://wiki.ros.org/ROS/Tutorials
+**ROS Installation :-** http://wiki.ros.org/ROS/Installation
+
+**Managing Environvment**
+During the installation of ROS, we will see that we are prompted to source one of several setup.*sh files, or even add this 'sourcing' to our shell startup script. This is required because ROS relies on the notion of combining spaces using the shell environment. This makes developing against different versions of ROS or against different sets of packages easier.<br>
+If we are ever having problems finding or using our ROS packages make sure that we have our environment properly set up. A good way to check is to ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set : **`$ printenv | grep ROS`**<br>
+If they are not then we might need to **'source'** some **`setup.*sh`** files.
+Environment setup files are generated for us, but can come from different places :<br>
+- ROS packages installed with package managers provide setup.*sh files.
+- rosbuild workspaces provide setup.*sh files using tools like rosws.
+- Setup.*sh files are created as a by-product of building or installing catkin packages.
+If we just installed ROS from apt on Ubuntu then we will have setup.*sh files in **'`/opt/ros/<distro>/`'**, and we could source them like so : **`$ source /opt/ros/<distro>/setup.bash`**<br>
+Using the short name of our ROS distribution instead of <distro>. If we have installed ROS Kinetic, that would be : **`$ source /opt/ros/kinetic/setup.bash`**<br>
+We will need to run this command on every new shell we open to have access to the ROS commands, unless we add this line to our **.bashrc**. This process allows us to install serval ROS distributions (eg. indigo and kinetic) on the same computer and switch between them. On other platforms we will find these setup.*sh files wherever we have installed ROS.
