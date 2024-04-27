@@ -1,4 +1,4 @@
-## I have learned ROS to complete the tasks for Eyantra (Luminosity Drone)
+# Eyantra 23-24 (Luminosity Drone)
 **Theme :-** Luminosity Drone (LD)<br>
 **Technology Stacks :** Drone Building, Control Systems, Position control & Waypoint navigation, Image processing.<br>
 **Tools and Technologies :** Robot Operating System (ROS), Gazebo simulation, Python programming, OpenCV<br>
