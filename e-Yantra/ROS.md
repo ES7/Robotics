@@ -49,8 +49,8 @@ This command displays the directories and files while in the top level directory
 **`/etc` – Configuration files :-** The configuration files of BIOS and other similar files can be found in /etc. We can edit these configuration files in a text editor. Basically, every single kind of configuration file is located in /etc, including but not limited to system configuration files.
 
 **`/home` – Home Folder Containment :-** There’s a home folder for every user on the system and each one is contained together in the /home directory. These folders are created using the name of the user name. Home folder → /home/name.
-These home folders contain your user data files and configuration files that are specific to the user, which is also the one of the only types of configuration files that are stored elsewhere besides /etc.
-**NOTE :-** If one wants to modify other files on a system, they must become the root user, as each user only has write permissions for their own home folder.
+These home folders contain your user data files and configuration files that are specific to the user, which is also the one of the only types of configuration files that are stored elsewhere besides /etc.<br>
+**NOTE :-** If one wants to modify other files on a system, they must become the root user, as each user only has write permissions for their own home folder (/home/name).
 
 **`/lib` – Libraries for Programs :-** Each program or binary uses specific libraries to function and the /lib directory is where these libraries can be located.
 
@@ -71,3 +71,46 @@ These home folders contain your user data files and configuration files that are
 **`/usr` – User Shared Read-Only Data :-** The /usr directory is used to contain applications and files that are used and shared by and between users.
 
 **`/var` – Variable Data :-** The /var directory is used like the /usr directory, only instead of being read-only, it is writable. This directory contains system logs and other various variable data.
+
+### Linux File Permissions
+Like most of the modern operating systems, Linux is a multi-user OS hence an extra layer of security is added to prevent users from accessing each other's confidential files. 
+
+Linux divides authorization into two levels :- **Ownership; Permission**.
+Each file and directory has three user based permission groups :- **owner, group, all**
+Each file or directory has three basic permission types :- **read, write, execute**
+
+Linux File Permissions is a vast topic but we need not have to master it to succeed in this eYRC Theme. The only thing we need to keep in mind is that unlike Windows where programs with **.exe** extension can be executed, in **UNIX/Linux**, files with execute permission can only be executed/run by the user.
+
+To make a file executable in Linux following command can be used,
+**`sudo chmod +x <file_name>`**
+
+### Linux Commands
+**The Linux Terminal :-** In UNIX, a terminal is a text interface to interact with the OS. There is a list of commands which users can use to interact with the OS. Terminal is also called a **shell** or **console**.<br>
+**Command Prompt** and **Powershell** are two such interfaces provided by Windows OS.<br>
+In **Ubuntu** and most of the UNIX based OS a particular type of shell called **Bash** which is one kind of UNIX shell, is launched when you open any Terminal program. **Zsh** is another such popular shell for UNIX.<br>
+These UNIX shells like Bash and Zsh are command processors which take commands from the user, interpret them and execute the commands with the help of the underlying OS.
+UNIX shells can also read commands from a file. Such files are called Shell Scripts. In the next section we will explore this.<br>
+One such shell script is **`.bashrc`** which resides in **`/home/directory`**. This shell script runs every time you open an instance of Bash shell.<br>
+In Ubuntu you can press **`Ctrl+Alt+T`** to open up an instance of the terminal.
+
+### Common Linux Commands
+**sudo**<br>
+In UNIX a superuser or root is a user which has unrestricted access to all the commands, files, folders and resources of the system. If we want to run any command as a superuser we need to prefix that command with **sudo**.<br>
+Eg : **`sudo chmod +x hello.sh`**.
+- **`ls` :-** List the files and folders in the current directory.
+**`ls -l` :- -l flag** is used with ls to list files and folders in the current directory with their permissions.<br>
+**`ls -la` :- -la flag** is used to list all the files and folders including hidden ones with their permissions.<br>
+- **`mkdir folder1 folder2` :-** this command will create 2 folders, folder1 & folder2 in the current directory.
+• **`cd ~` :-** this will take to /home/directory. In UNIX, tilde ~ is used to represent home directory.<br>
+**`cd ~/catkin_ws` :-** this will take us inside a folder named catkin_ws in the home directory. 
+- **`echo "hello"` :-** this will print the string hello in the terminal.<br>
+**`echo “hello” >> file.txt` :-** this will append the string hello at the end of file.txt. This won’t overwrite anything.<br>
+**`echo “hello” > file.txt` :-** this will append the string hello at the beginning of the file.txt. This will overwrite.
+- **`find . -type d -name "dir_name_start*"` :-** list the files and folders in the current directory starting with "dir_nam_start".<br>
+**`find . -type f -name "file_name.*"` :-** search for files starting with "file_name" with unknown extension.
+- **`grep -rnw "text"` :-** search for “text” string inside any type of file.
+**`catkin build | grep "pkg_my_ros"` :-** highlight and show only the pre-defined text in the output of a command. 
+- **`which python` :-** this command is used to find the location of an executable available to shell.
+- **`pwd` :-** this will print the path of the current directory we are in.
+- **`cat -n file.txt` :-** this will print the content of file.txt with line numbers, in the terminal.
+- **`man` :-** use full command in UNIX, if we are not sure how to use any command then just call this like :  man which.
