@@ -121,34 +121,3 @@ ROS offers a modular and distributed architecture that facilitates communication
 
 **ROS Tutorials :-** http://wiki.ros.org/ROS/Tutorials <br>
 **ROS Installation :-** http://wiki.ros.org/ROS/Installation
-
-**Managing Environvment**<br>
-During the installation of ROS, we will see that we are prompted to source one of several setup.*sh files, or even add this 'sourcing' to our shell startup script. This is required because ROS relies on the notion of combining spaces using the shell environment. This makes developing against different versions of ROS or against different sets of packages easier.<br>
-If we are ever having problems finding or using our ROS packages make sure that we have our environment properly set up. A good way to check is to ensure that environment variables like ROS_ROOT and ROS_PACKAGE_PATH are set : **`$ printenv | grep ROS`**<br>
-If they are not then we might need to **'source'** some **`setup.*sh`** files.
-Environment setup files are generated for us, but can come from different places :<br>
-- ROS packages installed with package managers provide setup.*sh files.
-- rosbuild workspaces provide setup.*sh files using tools like rosws.
-- Setup.*sh files are created as a by-product of building or installing catkin packages.
-
-If we just installed ROS from apt on Ubuntu then we will have setup.*sh files in **'`/opt/ros/<distro>/`'**, and we could source them like so : **`$ source /opt/ros/<distro>/setup.bash`**<br>
-Using the short name of our ROS distribution instead of <distro>. If we have installed ROS Kinetic, that would be : **`$ source /opt/ros/kinetic/setup.bash`**<br>
-We will need to run this command on every new shell we open to have access to the ROS commands, unless we add this line to our **.bashrc**. This process allows us to install serval ROS distributions (eg. indigo and kinetic) on the same computer and switch between them. On other platforms we will find these setup.*sh files wherever we have installed ROS.
-
-**Create a ROS Workspace (Catkin)** <br>
-create and build a catkin workspace:<br>
-**`$ mkdir -p ~/catkin_ws/src`**<br>
-**`$ cd ~/catkin_ws/`**<br>
-**`$ catkin_make`**<br>
-The catkin_make command is a convenience tool for working with catkin workspaces. Running it the first time in our workspace, it will create a `CMakeLists.txt` link in our 'src' folder.<br>
-
-**Python 3 users in ROS Melodic and earlier :** If we are building ROS from source to achieve Python 3 compatibility, and have set up our system appropriately (ie: have the Python 3 versions of all the required ROS Python packages installed, such as catkin) the first catkin_make command in a clean catkin workspace must be : **`$ catkin_make -DPYTHON_EXECUTABLE=/usr/bin/python3`**<br>
-This will configure catkin_make with Python 3. We may then proceed to use just catkin_make for subsequent builds.
-
-Additionally, if we look in our current directory we should now have a **'build'** and **'devel'** folder. Inside the 'devel' folder we can see that there are now several **`setup.*sh`** files. Sourcing any of these files will overlay this workspace on top of our environment. Before continuing to source our new setup.*sh file :<br>
-**`$ source devel/setup.bash`**<br>
-To make sure our workspace is properly overlayed by the setup script, make sure ROS_PACKAGE_PATH environment variable includes the directory we're in.<br>
-**`$ echo $ROS_PACKAGE_PATH`**<br>
-**`/home/youruser/catkin_ws/src:/opt/ros/kinetic/share`**<br>
-
-#### Navigating the ROS Filesystem
