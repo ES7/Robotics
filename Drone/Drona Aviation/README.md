@@ -1,4 +1,4 @@
-# Pluto Drone Swarm Challenge
+![image](https://github.com/user-attachments/assets/7b5ab917-c46c-4bfe-b47e-89ce2e744a2d)# Pluto Drone Swarm Challenge
 Drona Aviation High Prep problem statement of InterIIT TechMeet 11.0 held at IIT Kanpur. This repository contains our attempted solutions and code for
 all the 3 tasks of the problem statement. The first task was to make the pytohn wrapper for easy control of the drone during flying compared to earlier solutions of using
 ROS or Pluto Drone App. Second task was to allow for setpoint navigation which can be hardcoded in the program initially, the drone is viewed by a camera on the s the Aruco Marker on top of the drone. Third task was to simultaneously control two drones which would make a rectangle in sync.
@@ -87,4 +87,4 @@ We went to look for a lot of literature from the start and came across a lot of 
 [Filter for reducing error in depth](https://www.kalmanfilter.net/default.aspx)<br>
 
 ## Final Pipeline
-![Screenshot 2024-01-24 120057](https://github.com/ES7/Robotics/assets/95970293/e01973b6-10c9-462e-bc01-3ae70c8fb125)
+![pipeline.png]()
