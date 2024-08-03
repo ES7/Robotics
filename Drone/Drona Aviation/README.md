@@ -55,7 +55,7 @@ In the `Cam Calliberation.py` file we first define the chessboard dimension and 
 <br><br>
 In the `Distance Measurment.py` file we use this calib_data.npz file, load its data, define the aruco marker size in centimeters, then we detected the marker from the frames that we are capturing from the camera, if the marker is detected then we estimate its position using cv.estimatePoseSingleMarkers() and pass marker corners, marker size, camera matrix and distance coefficient and then we draw the boundary of the marker and its axes using cv.polyLines() and cv.drawFrameAxes(). Then using the translation vector we get the distance that is the z coordinate of the marker from the plane of the camera and then we add text i.e., ID number and Distance to each frame.
 <br><br>
-![](Task 2.png)
+![](Task2.png)
 ## Task 3
 **Communication with 2nd drone :** <br>
 This code is an example of **ESP32 code written in C++ using the Arduino IDE**. It sets up a connection to a Wi-Fi network with the **SSID** and **password**. The code uses the built-in LED on the ESP32 board and blinks it until the device successfully connects to the Wi-Fi network. <br>
